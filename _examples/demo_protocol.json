@@ -1,17 +1,17 @@
 {
   "properties": {
-    "study_name": "Demo",
-    "study_id": "3ZDOGAH",
-    "created_by": "Adrian Shatte",
-    "instructions": "This is a demo study showing the features of schema",
-    "post_url": "https://getschema.app/demo_post.php",
+    "study_name": "COSMIC",
+    "study_id": "CSM_MPI",
+    "created_by": "Shreya Kapoor",
+    "instructions": "This is a demo for the word learning app",
+    "post_url": "https://fa47-217-69-241-69.ngrok.io/demo_post.php",
     "empty_msg": "You're all up to date",
-    "banner_url": "https://getschema.app/img/schema_banner.png",
+    "banner_url": "https://skeidelab.com/Images/logo_v3.png",
     "support_url": "https://getschema.app",
-    "support_email": "hello@getschema.app",
+    "support_email": "kapoorshreya18@gmail.com",
     "conditions": [
       "Control",
-      "Treatment"
+      "Intervention8"
     ],
     "cache": false,
     "ethics": "This study was approved by ethics body with approval #123456789",
@@ -28,8 +28,8 @@
         "duration": 1,
         "times": [
           {
-            "hours": 8,
-            "minutes": 30
+            "hours": 13,
+            "minutes": 57
           }
         ],
         "random": true,
@@ -50,7 +50,7 @@
             {
               "id": "instruction-1wnjocfw",
               "type": "instruction",
-              "text": "Hello! Welcome to the study! This module only shows for those enrolled in the control condition.",
+              "text": "Hello! Welcome to COSMIC's word learning app. We are going to track the learning of the vocab by your child during the course of this study.",
               "required": false,
               "hide_id": "",
               "hide_value": "",
@@ -70,34 +70,33 @@
       "name": "Elements",
       "submit_text": "Submit",
       "alerts": {
-        "title": "Elements Demo",
-        "message": "Tap to open app",
+        "title": "ELFRA Questionnaire survery",
+        "message": "Tap to open the survey",
         "duration": 5,
         "times": [
           {
-            "hours": 9,
-            "minutes": 30
+            "hours": 13,
+            "minutes": 58
           },
           {
-            "hours": 12,
-            "minutes": 30
+            "hours": 13,
+            "minutes": 50
           },
           {
-            "hours": 15,
-            "minutes": 30
+            "hours": 13,
+            "minutes": 51
           },
           {
-            "hours": 18,
-            "minutes": 30
+            "hours": 13,
+            "minutes": 52
           }
         ],
         "random": true,
-        "random_interval": 30,
+        "random_interval": 1,
         "sticky": false,
         "sticky_label": "",
-        "timeout": true,
-        "timeout_after": 30,
-        "start_offset": 1
+        "timeout": false,
+        "start_offset": 0
       },
       "graph": {
         "display": true,
