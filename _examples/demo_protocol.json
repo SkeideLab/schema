@@ -11,7 +11,7 @@
     "support_email": "kapoorshreya18@gmail.com",
     "conditions": [
       "Control",
-      "Intervention8"
+      "Intervention"
     ],
     "cache": false,
     "ethics": "This study was approved by ethics body with approval #123456789",
@@ -20,7 +20,7 @@
   "modules": [
     {
       "type": "info",
-      "name": "Welcome",
+      "name": "Enroll",
       "submit_text": "Submit",
       "alerts": {
         "title": "Welcome to the study",
@@ -28,14 +28,14 @@
         "duration": 1,
         "times": [
           {
-            "hours": 13,
-            "minutes": 57
+            "hours": 8,
+            "minutes": 10
           }
         ],
         "random": true,
         "random_interval": 30,
         "sticky": true,
-        "sticky_label": "Start here",
+        "sticky_label": "Start",
         "timeout": false,
         "timeout_after": 0,
         "start_offset": 0
@@ -48,9 +48,18 @@
           "name": "Welcome",
           "questions": [
             {
-              "id": "instruction-1wnjocfw",
+              "id": "instruction-1",
               "type": "instruction",
               "text": "Hello! Welcome to COSMIC's word learning app. We are going to track the learning of the vocab by your child during the course of this study.",
+              "required": false,
+              "hide_id": "",
+              "hide_value": "",
+              "hide_if": true
+            },
+            {
+              "id": "instruction-2",
+              "type": "Sprache (a)",
+              "text": "Kleine Kinder verstehen viel mehr Wörter als sie selbst sprechen können. Wir interessieren uns sowohl für die Wörter, die Ihr Kind nur versteht, als auch für die Wörter, die es schon spricht.",
               "required": false,
               "hide_id": "",
               "hide_value": "",
@@ -67,7 +76,7 @@
     },
     {
       "type": "survey",
-      "name": "Elements",
+      "name": "Fragen",
       "submit_text": "Submit",
       "alerts": {
         "title": "ELFRA Questionnaire survery",
