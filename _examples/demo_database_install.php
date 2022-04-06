@@ -3,9 +3,9 @@
     class SchemaDBManager {
     
         private function connect() {
-            $serverName = "localhost"; // change to your server
-            $username = "YOUR_USERNAME"; // change to your username
-            $password = "YOUR_PASSWORD"; // change to your password
+            $serverName = "localhost:9999"; // change to your server
+            $username = "skapoor"; // change to your username
+            $password = "COSMIC2022*"; // change to your password
 
 
             $conn = new mysqli($serverName, $username, $password);
@@ -63,8 +63,23 @@
                 return true;
             return false;
         }
-
-        function setupDB() {
+        
+        private function writeToDataTable($conn) {
+            mysqli_select_db($conn, "schema_datastore");
+            
+            $study = $_POST['study_id'];
+            $user = $_POST['user_id'];
+            $ind = $_POST['module_index'];
+            $platform = $_POST['platform'];
+            
+            $sql = "INSERT INTO data (study_id, user_id, module_index, platform) 
+            VALUES ('$study', '$user', '$ind', '$platform')";
+            if ($conn->query($sql) === TRUE) 
+                return true;
+            return false;
+            
+        }
+        function setupDB($conn) {
             $conn = $this->connect();
 
             $db = $this->createDB($conn);
@@ -73,6 +88,7 @@
                 echo "Database created successfully";
                 $dataTableCreated = $this->createDataTable($conn);
                 $logsTableCreated = $this->createLogTable($conn);
+                $insertData = $this->writeToDataTable($conn);
             } else {
                 echo "There was an error creating the database";
             }
@@ -86,6 +102,10 @@
                 echo "Logs table created successfully";
             else 
                 echo "Error creating logs table";
+            if ($insertData)
+            	echo "Data has been inserted to the table";
+            else
+                echo "Error inserting data into the table"; 
 
             $this->closeDB($conn);
         }
@@ -93,5 +113,6 @@
 
     $dbManager = new SchemaDBManager();
     $dbManager->setupDB();
+    
 
 ?>
