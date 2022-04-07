@@ -2,9 +2,9 @@
     class SchemaDBManager {
     
         private function connect() {
-            $serverName = "localhost:9999"; // change to your server
-            $username = "skapoor"; // change to your username
-            $password = "COSMIC2022*"; // change to your password
+            $serverName = "localhost"; // change to your server
+            $username = "uname"; // change to your username
+            $password = "password"; // change to your password
 
 
             $conn = new mysqli($serverName, $username, $password);
@@ -28,7 +28,7 @@
         private function createDataTable($conn) {
             mysqli_select_db($conn,"schema_datastore");
 
-            $sql = "CREATE TABLE data (
+            $sql = "CREATE TABLE IF NOT EXISTS data (
                 data_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 study_id VARCHAR(30) NOT NULL,
                 user_id VARCHAR(30) NOT NULL,
@@ -48,7 +48,7 @@
         private function createLogTable($conn) {
             mysqli_select_db($conn,"schema_datastore");
 
-            $sql = "CREATE TABLE logs (
+            $sql = "CREATE TABLE IF NOT EXISTS logs (
                 log_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 study_id VARCHAR(30) NOT NULL,
                 user_id VARCHAR(30) NOT NULL,
@@ -85,7 +85,7 @@
             return false;
             
         }
-        function setupDB($conn) {
+        function setupDB() {
             $conn = $this->connect();
 
             $db = $this->createDB($conn);
