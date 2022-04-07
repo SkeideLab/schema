@@ -4,7 +4,7 @@
     "study_id": "CSM_MPI",
     "created_by": "Shreya Kapoor",
     "instructions": "This is a demo for the word learning app",
-    "post_url": "https://fa47-217-69-241-69.ngrok.io/demo_post.php",
+    "post_url": "https://19f2-217-69-241-69.ngrok.io/demo_database_install.php",
     "empty_msg": "You're all up to date",
     "banner_url": "https://skeidelab.com/Images/logo_v3.png",
     "support_url": "https://getschema.app",
@@ -84,15 +84,15 @@
         "duration": 5,
         "times": [
           {
-            "hours": 13,
-            "minutes": 58
+            "hours": 9,
+            "minutes": 52
           },
           {
-            "hours": 13,
-            "minutes": 50
+            "hours": 9,
+            "minutes": 55
           },
           {
-            "hours": 13,
+            "hours": 10,
             "minutes": 51
           },
           {

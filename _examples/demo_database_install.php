@@ -1,5 +1,6 @@
 <?php
-
+ini_set(‘display_errors’, ‘on’); 
+error_reporting(E_ALL); 
     class SchemaDBManager {
     
         private function connect() {
@@ -66,14 +67,21 @@
         
         private function writeToDataTable($conn) {
             mysqli_select_db($conn, "schema_datastore");
-            
-            $study = $_POST['study_id'];
-            $user = $_POST['user_id'];
-            $ind = $_POST['module_index'];
+            print_r($_POST);
+            $study_id = $_POST['study_id'];
+            $user_id = $_POST['user_id'];
+            $module_index = $_POST['module_index'];
+            $module_name = $_POST['module_name'];
+            $responses = $_POST['responses'];
+            $response_time = $_POST['response_time'];
+            $alert_time = $_POST['alert_time'];
             $platform = $_POST['platform'];
             
-            $sql = "INSERT INTO data (study_id, user_id, module_index, platform) 
-            VALUES ('$study', '$user', '$ind', '$platform')";
+            $sql = "INSERT INTO `data` (`study_id`, `user_id`, `module_index`, `module_name`,
+                     `responses`, `response_time`, `alert_time`, `platform`) VALUES 
+                     ('$study_id', '$user_id', '$module_index', '$module_name','$responses','$response_time','$alert_time','$platform')";
+
+                     
             if ($conn->query($sql) === TRUE) 
                 return true;
             return false;
@@ -87,8 +95,8 @@
             if ($db) {
                 echo "Database created successfully";
                 $dataTableCreated = $this->createDataTable($conn);
-                $logsTableCreated = $this->createLogTable($conn);
                 $insertData = $this->writeToDataTable($conn);
+                $logsTableCreated = $this->createLogTable($conn);
             } else {
                 echo "There was an error creating the database";
             }
