@@ -1,16 +1,16 @@
 <?php
     class SchemaDBManager {
-    
+
         private function connect() {
             $serverName = "localhost"; // change to your server
-            $username = "uname"; // change to your username
-            $password = "password"; // change to your password
+            $username = "skapoor"; // change to your username
+            $password = "Land**"; // change to your password
 
 
             $conn = new mysqli($serverName, $username, $password);
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
-            } 
+            }
             return $conn;
         }
 
@@ -20,7 +20,7 @@
 
         private function createDB($conn) {
             $sql = "CREATE DATABASE IF NOT EXISTS schema_datastore";
-            if ($conn->query($sql) === TRUE) 
+            if ($conn->query($sql) === TRUE)
                 return true;
             return false;
         }
@@ -39,12 +39,12 @@
                 alert_time VARCHAR(1000) NOT NULL,
                 platform VARCHAR(50) NOT NULL
             )";
-            
-            if ($conn->query($sql) === TRUE) 
+
+            if ($conn->query($sql) === TRUE)
                 return true;
             return false;
         }
-        
+
         private function createLogTable($conn) {
             mysqli_select_db($conn,"schema_datastore");
 
@@ -57,12 +57,12 @@
                 timestamp VARCHAR(500) NOT NULL,
                 platform VARCHAR(50) NOT NULL
             )";
-            
-            if ($conn->query($sql) === TRUE) 
+
+            if ($conn->query($sql) === TRUE)
                 return true;
             return false;
         }
-        
+
         private function writeToDataTable($conn) {
             mysqli_select_db($conn, "schema_datastore");
             print_r($_POST);
@@ -74,22 +74,20 @@
             $response_time = $_POST['response_time'];
             $alert_time = $_POST['alert_time'];
             $platform = $_POST['platform'];
-            
-            $sql = "INSERT INTO `data` (`study_id`, `user_id`, `module_index`, `module_name`,
-                     `responses`, `response_time`, `alert_time`, `platform`) VALUES 
-                     ('$study_id', '$user_id', '$module_index', '$module_name','$responses','$response_time','$alert_time','$platform')";
 
-                     
-            if ($conn->query($sql) === TRUE) 
+            $sql = "INSERT INTO `data` (`study_id`, `user_id`, `module_index`, `module_name`, `responses`, `response_time`, `alert_time`, `platform`)
+                    VALUES ('$study_id', '$user_id', '$module_index', '$module_name', '$responses', '$response_time', '$alert_time', '$platform')";
+
+            if ($conn->query($sql) === TRUE)
                 return true;
             return false;
-            
+
         }
         function setupDB() {
             $conn = $this->connect();
 
             $db = $this->createDB($conn);
-            
+
             if ($db) {
                 echo "Database created successfully";
                 $dataTableCreated = $this->createDataTable($conn);
@@ -104,14 +102,14 @@
             else
                 echo "Error creating data table";
 
-            if ($logsTableCreated) 
+            if ($logsTableCreated)
                 echo "Logs table created successfully";
-            else 
+            else
                 echo "Error creating logs table";
             if ($insertData)
             	echo "Data has been inserted to the table";
             else
-                echo "Error inserting data into the table"; 
+                echo "Error inserting data into the table";
 
             $this->closeDB($conn);
         }
@@ -119,6 +117,6 @@
 
     $dbManager = new SchemaDBManager();
     $dbManager->setupDB();
-    
+
 
 ?>
