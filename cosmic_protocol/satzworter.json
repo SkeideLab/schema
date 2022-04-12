@@ -1,0 +1,42 @@
+{
+    "name": "Satzworter",
+    "questions": [
+        {
+            "id": "satz-1",
+            "type": "multi",
+            "text": "Bitte",
+            "radio": true,
+            "modal": false,
+            "options": [
+                "Versteht",
+                "Versteht und Spricht"
+            ],
+            "required": true
+        },
+        {
+            "id": "satz-1",
+            "type": "multi",
+            "text": "Danke",
+            "radio": true,
+            "modal": false,
+            "options": [
+                "Versteht",
+                "Versteht und Spricht"
+            ],
+            "required": true
+        },
+        {
+            "id": "satz-1",
+            "type": "multi",
+            "text": "Nein",
+            "radio": true,
+            "modal": false,
+            "options": [
+                "Versteht",
+                "Versteht und Spricht"
+            ],
+            "required": true
+        }
+    ],
+    "shuffle": false
+}

@@ -1,0 +1,124 @@
+{
+    "name": "Tiere",
+    "questions": [
+        {
+            "id": "instruction-mof4ymv4",
+            "type": "instruction",
+            "text": "In diesem Abschnitt werden die Tiernamen gesammelt, die Ihr Kind versteht",
+            "required": false
+        },
+        {
+            "id": "tier-1",
+            "type": "yesno",
+            "text": "Elefant",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-2",
+            "type": "yesno",
+            "text": "Bär",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-3",
+            "type": "yesno",
+            "text": "Hase",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-4",
+            "type": "yesno",
+            "text": "Ente (quack quack)",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-5",
+            "type": "yesno",
+            "text": "Hund (wau wau)",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-6",
+            "type": "yesno",
+            "text": "Katze (miau)",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-7",
+            "type": "yesno",
+            "text": "Kuh (mu)",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-8",
+            "type": "yesno",
+            "text": "Pferd",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-9",
+            "type": "yesno",
+            "text": "Schaf (mah)",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-10",
+            "type": "yesno",
+            "text": "Schildkröte",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-11",
+            "type": "yesno",
+            "text": "Schildkröte",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-12",
+            "type": "yesno",
+            "text": "Schmetterling",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-13",
+            "type": "yesno",
+            "text": "Schwein",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        },
+        {
+            "id": "tier-14",
+            "type": "yesno",
+            "text": "Vogel (plep plep)",
+            "required": true,
+            "yes_text": "Versteht",
+            "no_text": "Versteht und spricht"
+        }
+    ],
+    "shuffle": false
+}
